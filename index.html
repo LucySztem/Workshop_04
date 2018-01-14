@@ -6,48 +6,54 @@
     <title>Aplikacja_04</title>
 </head>
 <body>
-  <div class="container">
-    <div id = "table">
-    <div class="row">
-      <div class="col-sm">
-      Nazwa ksiazki
-      </div>
-      <div class="col-sm">
-      Autor
-      </div>
-      <div class="col-sm">
-        ISBN
-      </div>
-      <div class="col-sm">
-        Description
-      </div>
-    </div>
-  </div>
+  <div class='container'>
+         <form>
+             <div class="form-group">
+                 <label for="Tytul">Tytuł:</label>
+                 <input type="text" class="form-control" id="title">
+             </div>
+             <div class="form-group">
+                 <label for="Tytul">Autor:</label>
+                 <input type="text" class="form-control" id="author">
+             </div>
+             <div class="form-group">
+                 <label for="Tytul">Wydawnictwo:</label>
+                 <input type="text" class="form-control" id="publisher">
+             </div>
+             <div class="form-group">
+                 <label for="Tytul">Dział:</label>
+                 <input type="text" class="form-control" id="type">
+             </div>
+             <div class="form-group">
+                 <label for="Tytul">ISBN</label>
+                 <input type="text" class="form-control" id="isbn">
+             </div>
+             <button id="btnToSend" type="submit" class="btn btn-primary">Dodaj</button>
+         </form>
+     </div>
+ <br>
+ <br>
+     <div class="container-fluid">
+         <!-- Content here -->
+         <div class='row'>
+             <div class='col-sm'>
+                 Tytuł
+             </div>
+             <div class='col-sm'>
+                 Autor
+             </div>
+             <div class='col-sm'>
+                 Wydawnictwo
+             </div>
+             <div class='col-sm'>
+                 Dział
+             </div>
+             <div class='col-sm'>
+                 ISBN
+             </div>
+         </div>
 
-  <form>
-  <div class="form-group">
-    <label for="title">Tytul</label>
-    <input type="text" class="form-control" id="title" placeholder="Tytul ksiazki">
-  </div>
-  <div class="form-group">
-    <label for="author">Autor</label>
-    <input type="text" class="form-control" id="author" placeholder="Autor">
-  </div>
-  <div class="form-group">
-    <label for="isbn">ISBN</label>
-    <input type="text" class="form-control" id="isbn" placeholder="ISBN ksiazki">
-  </div>
-  <div class="form-group">
-    <label for="description">Opis</label>
-    <input type="text" class="form-control" id="description" placeholder="Opis ksiazki">
-  </div>
-  <div class="form-group">
-    <label for="publisher">Wydawca</label>
-    <input type="text" class="form-control" id="publisher" placeholder="Wydawca">
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-</div>
+ </div>
 
 
 </body>
