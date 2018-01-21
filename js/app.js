@@ -8,7 +8,7 @@ $(document).ready(function () {
         //url for workshop nr 4 (apifront) -> "http://localhost:8282/books/"
         //url for workshop 05 (apiback) -> "http://localhost:8080/apiBack/books"
         $.ajax({
-            url: "http://localhost:8282/books/"
+            url: "http://localhost:8080/apiBack/books"
         }).done(function (books) {
             booksCollection = books;
             addBooksToHtml(books);
@@ -61,7 +61,7 @@ $(document).ready(function () {
         del.on('click', function () {
             var idTmp = $(this).attr('id');
             var myHeaders = new Headers({
-                'content-type': 'aplication/json'
+                'content-type': 'application/json'
             });
 
             var myInit = {
@@ -71,9 +71,9 @@ $(document).ready(function () {
                 cache: 'default'
             };
 /*loclahost 8282 is for the workshop nr 4  (apifront)*/
-            fetch('http://localhost:8282/books/remove/' + idTmp, myInit).then(response => response.json());
+          //  fetch('http://localhost:8282/books/remove/' + idTmp, myInit).then(response => response.json());
 /*localhost 8080 is for workshop 05 (apiback)*/
-          //  fetch('http://localhost:8080/apiBack/books/' + idTmp, myInit).then(response => response.json());
+           fetch('http://localhost:8080/apiBack/books/' + idTmp, myInit).then(response => response.json());
 
             clearList();
             clearDelButtons();
@@ -100,7 +100,7 @@ $(document).ready(function () {
         }
 /*myHeaders and myInit created for the fetch method*/
         var myHeaders = new Headers({
-            'content-type': 'aplication/json'
+            'content-type': 'application/json'
         })
 
         var myInit = {
@@ -112,11 +112,11 @@ $(document).ready(function () {
         };
 
 /*loclahost 8282 is for the workshop nr 4  (apifront)*/
-        fetch("http://localhost:8282/books/add", myInit).then(function (response) {
-        console.log(response);
+        //fetch("http://localhost:8282/books/add", myInit).then(function (response) {
+      //  console.log(response);
 /*localhost 8080 is for workshop 05 (apiback)*/
-        //fetch("http://localhost:8080/apiBack/books/", myInit).then(function (response) {
-          //  console.log(response);
+        fetch("http://localhost:8080/apiBack/books/", myInit).then(function (response) {
+           console.log(response);
         })
 
         clearList();
